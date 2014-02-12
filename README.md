@@ -3,4 +3,4 @@ mvanhest.nl
 
 Martijn van Hest
 
-(http://designerdennis.github.io/mvhest.nl/)
+(http://designerdennis.github.io/mvanhest.nl/)
