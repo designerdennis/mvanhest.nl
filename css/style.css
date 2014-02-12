@@ -25,10 +25,15 @@ a:hover {
 
 h1 {
   font-weight: 100;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   font-family: HelveticaNeue-UltraLight;
   font-size: 36px;
   padding-bottom: 20px;
+  text-rendering: inherit;
+  -webkit-font-feature-settings: "liga" 0;
+  -moz-font-feature-settings: "liga" 0;
+  -ms-font-feature-settings: "liga" 0;
+  -o-font-feature-settings: "liga" 0;
 }
 .sub-nav .on a {
   color: #FFF;
