@@ -1,33 +1,21 @@
 ---
 layout: default
 title: Martijn van Hest. Kunstschilder uit Tilburg
----   
+---  
+
 <a name="schilderijen"></a>
 <div data-magellan-destination="schilderijen">
   <section class="paintings">
     <div class="thumbnails">
       <div class="row">
-		    <div class="large-4 medium-4 columns">
-          <a href="images/Schilderijen/Boeren dorp met brug_groot.png"><img src="images/Schilderijen/Boeren dorp met brug_tumb.png" width="240" height="180" alt="Schilderij Boerendorp met brug"></a>
-		    </div>
-		    <div class="large-4 medium-4 columns">
-          <a href="images/Schilderijen/De uithoek_groot.png"><img src="images/Schilderijen/De uithoek_tumb.png" width="240" height="180" alt="Schilderij De uithoek"></a>
-		    </div>
-		    <div class="large-4 medium-4 columns">
-          <a href="images/Schilderijen/Huis op de heuvel_groot.png"><img src="images/Schilderijen/Huis op de heuvel_tumb.png" width="240" height="180" alt="Schilderij Huis op de heuvel"></a>
-		    </div>
-      </div>
-      <div class="row">
-		    <div class="large-4 medium-4 columns">
-          <a href="images/Schilderijen/man in winter landschap_groot.png"><img src="images/Schilderijen/man in winter landschap_tumb.png" width="240" height="180" alt="Schilderij Man in winter landschap"></a>
-		    </div>
-		    <div class="large-4 medium-4 columns">
-          <a href="images/Schilderijen/Ontmoeting aan de bosrand_groot.png"><img src="images/Schilderijen/Ontmoeting aan de bosrand_tumb.png" width="240" height="180" alt="Schilderij Ontmoeting aan de bosrand"></a>
-		    </div>
-		    <div class="large-4 medium-4 columns">
-          <a href="images/Schilderijen/Rune in Luxemburg_groot.png"><img src="images/Schilderijen/Ruine in Luxemburg_tumb.png" width="240" height="180" alt="Schilderij Ruïne in Luxemburg"></a>
-		    </div>
-      </div>
+      {% for painting in site.data.paintings %}
+        
+        <div class="large-4 medium-4 columns">
+          <a href="images/Schilderijen/{{ painting.photo }}_groot.png"><img src="images/Schilderijen/{{ painting.photo }}_tumb.png" width="240" height="180" alt="{{ painting.title }}"></a>
+        </div>
+        {% cycle '', '', '</div><div class="row">' %}
+      {% endfor %}
+      </div> 
     </div>
   </section>
 </div>
